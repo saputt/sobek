@@ -1,0 +1,194 @@
+@import url("global.css");
+
+@keyframes swayWind {
+  0% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(-1.5deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.sticky-note {
+    display: inline-block; 
+    position: relative;
+    margin-bottom: 100px; 
+    width: 100%;    
+    padding: 15px 15px 50px 15px;
+    cursor: pointer;
+    box-shadow: -10px 40px 50px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
+    transform-origin: top center; 
+    will-change: transform; 
+}
+
+.sticky-note:hover {
+  animation: swayWind 0.8s ease-out forwards;  
+  box-shadow: -20px 30px 45px -15px rgba(0, 0, 0, 0.15);
+}
+
+.sticky-note-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sticky-note-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35px;
+    word-wrap: break-word;
+}
+
+.sticky-note-username {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #4A4A4A;
+}
+
+.sticky-note-content {
+    color: #333333;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.detail-note-cont, .create-note-cont {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(3px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.close-note {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.detail-note, .create-note {
+    width: 700px;
+    height: 700px;
+    padding: 40px;
+    line-height: 75px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    position: relative;
+}
+
+.detail-note-title, .create-note-title {
+    font-size: 58px;
+    font-weight: 800px;
+    word-wrap: break-word;
+}
+
+.detail-note-username, .create-note-username {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.detail-note-content, .create-note-content {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-top: 15px;
+}
+
+.detail-note-content-cont, .create-note-content-cont {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.binder-clip {
+    background-image: url(../assets/clip.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -170px;
+    left: 210px;
+    background-repeat: no-repeat;
+    z-index: 40;
+}
+
+.detail-info, .create-info {
+    background-image: url("../assets/rule-paper.png");
+    background-size: contain;
+    height: 100%;
+}
+
+.create-info {
+    padding-top: 20px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-note-title-input, .create-note-username-input, .create-note-content-input  {
+    background: transparent;   
+    border: none;           
+    outline: none;
+}
+
+.create-note-title-input {
+    font-size: 35px;
+    resize: none;
+    width: 100%;
+    scrollbar-width: none;    
+    padding: 10px 0;
+    margin-bottom: 5px;    
+    word-wrap: break-word;
+}
+
+.create-note-content-input {
+    height: 300px;
+    width: 100%;
+    scrollbar-width: none;
+    line-height: 50px;
+    margin-top: 60px;
+}
+
+.tape {
+    background-image: url("../assets/tape.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    rotate: -46deg;
+    position: absolute;
+    top: -60px;
+    left: 70px;
+}
+
+.create-btn-cont {
+    display: flex;
+    justify-content: end;
+}
+
+.create-btn {
+    background: transparent;   
+    border: none;           
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+}

@@ -1,0 +1,82 @@
+@import url("global.css");
+
+.cont {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--primary);
+    padding: 35px 15px 15px 15px;
+    border-right: 1px solid #E0E0E0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.nav-link {
+    color: black;
+    padding: 15px;
+    transition: all;
+    transition-duration: 400ms;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+.main-cont {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--bg-board);
+    overflow: auto;
+    scrollbar-width: none;    
+}
+
+.mansory-cont {
+    min-height: 100vh;
+    background-color: #55775e; 
+    background-image: 
+        radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 80%),
+        url("https://www.transparenttextures.com/patterns/p6-polyester.png"); 
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+    border: 20px solid #5d4037; 
+    border-image-source: linear-gradient(#5d4037, #5d4037), 
+                         url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    border-image-slice: 30;
+    border-image-repeat: round;
+    box-shadow: 
+        inset 0 0 50px rgba(0,0,0,0.4), 
+        0 20px 40px rgba(0,0,0,0.5);    
+    column-count: 4;
+    column-gap: 20px;   
+    width: 1100px;
+    margin: 0 auto; 
+    padding: 60px; 
+    display: block;
+}
+
+.mansory-cont::after {
+    content: "";
+    position: absolute;
+    top: -20px; left: -20px; right: -20px; bottom: -20px;
+    border: 2px solid rgba(255, 255, 255, 0.1); 
+    pointer-events: none;
+    border-radius: 4px;
+}
+
+.logo-cont {
+    font-size: 50px;
+    font-weight: 500;
+    font-family: var(--font-logo);
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 20px;
+}

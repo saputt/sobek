@@ -1,0 +1,36 @@
+@import url("component.css");
+@import url("styles.css");
+@import url("responsive.css");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+  --font-logo: 'Fredoka', sans-serif;
+
+  --primary: #ffff;
+  --dark: #1a1a1b;
+  --text-main: #263238;
+  --bg-board: #F9F9F9; 
+
+  --radius: 8px;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hard: 5px 5px 0px rgba(0, 0, 0, 0.1); 
+
+  --shadow-floating: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font-main);
+}
+
+body {
+  overflow: hidden;
+}
+
+p {
+  overflow-wrap: break-word;
+}
