@@ -96,6 +96,14 @@ const saveNote = async () => {
     }
 }
 
+window.onload = () => {
+    const loader = document.getElementById('loader');
+    
+    setTimeout(() => {
+        loader.classList.add('loader-hidden');
+    }, 1000);
+};
+
 document.addEventListener("DOMContentLoaded", init)
 window.openDetail = openDetail
 window.openCreate = openCreate

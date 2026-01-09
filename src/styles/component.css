@@ -20,7 +20,6 @@
     position: relative;
     margin-bottom: 100px; 
     width: 100%;    
-    padding: 15px 15px 50px 15px;
     cursor: pointer;
     box-shadow: -10px 40px 50px -10px rgba(0, 0, 0, 0.2);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
@@ -37,6 +36,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 15px 15px 50px 15px;
+    background-image: url("../assets/rule-paper.png");
+    background-size: contain;
 }
 
 .sticky-note-title {
