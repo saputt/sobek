@@ -21,14 +21,12 @@ export const createNote = (color) => {
                             maxlength="50"
                             oninput="handleInput(this)"    
                         ></input>
-                        <div class="create-note-content-cont">
-                            <textarea 
-                                class="create-note-content create-note-content-input" 
-                                placeholder="Input content here" 
-                                maxlength="300"
-                                oninput="handleInput(this)"
-                            ></textarea>
-                        </div>
+                        <textarea 
+                            class="create-note-content create-note-content-input" 
+                            placeholder="Input content here" 
+                            maxlength="300"
+                            oninput="handleInput(this)"
+                        ></textarea>
                         <div class="create-btn-cont">
                             <button class="create-btn">Send</button>
                         </div>

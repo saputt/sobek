@@ -14,8 +14,7 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 20px;
+    gap: 10px;
 }
 
 .nav-link {
@@ -35,51 +34,41 @@
 
 .main-cont {
     width: 100%;
-    padding: 20px;
+    padding: 40px;
     background-color: var(--bg-board);
     overflow: auto;
-    scrollbar-width: none;    
+    scrollbar-width: none;
 }
 
 .mansory-cont {
-    background-color: #55775e; 
-    background-image: 
-        radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 80%),
-        url("https://www.transparenttextures.com/patterns/p6-polyester.png"); 
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
-    border: 20px solid #5d4037; 
-    border-image-source: linear-gradient(#5d4037, #5d4037), 
-                         url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    background-color: #55775e;
+    background-image:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 80%),
+        url("https://www.transparenttextures.com/patterns/p6-polyester.png");
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+    border: 20px solid #5d4037;
+    border-image-source: linear-gradient(#5d4037, #5d4037),
+        url('https://www.transparenttextures.com/patterns/wood-pattern.png');
     border-image-slice: 30;
     border-image-repeat: round;
-    box-shadow: 
-        inset 0 0 50px rgba(0,0,0,0.4), 
-        0 20px 40px rgba(0,0,0,0.5);    
-    width: 1150px;
-    margin: 0 auto; 
-    padding: 60px; 
+    box-shadow:
+        inset 0 0 50px rgba(0, 0, 0, 0.4),
+        0 20px 40px rgba(0, 0, 0, 0.5);
+    width: 1250px;
+    margin: 0 auto;
+    padding: 60px 60px 60px 30px;
     display: block;
     column-count: 4;
 }
 
-.mansory-cont::after {
-    content: "";
-    position: absolute;
-    top: -20px; left: -20px; right: -20px; bottom: -20px;
-    border: 2px solid rgba(255, 255, 255, 0.1); 
-    pointer-events: none;
-    border-radius: 4px;
-}
-
 .logo-cont {
-    font-size: 50px;
+    font-size: 38px;
     font-family: var(--font-logo);
     border-bottom: 1px solid #E0E0E0;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 
-/* loading */
 
 .loader-cont {
     position: fixed;
@@ -87,7 +76,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #2c352e; 
+    background-color: #2c352e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +99,7 @@
 .progress-bar {
     width: 200px;
     height: 4px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     margin: 0 auto 10px;
     position: relative;
     overflow: hidden;
@@ -126,14 +115,30 @@
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.8; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
 }
 
 @keyframes loadingMove {
-    0% { left: -40%; }
-    100% { left: 100%; }
+    0% {
+        left: -40%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 .loader-hidden {

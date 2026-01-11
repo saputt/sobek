@@ -5,8 +5,7 @@ export const aboutUs = () => {
                 class="about-us-note"
                 style="background-color : #FFF9C4"
             >   
-                <div class="binder-clip"></div>
-                <div class="detail-info">
+                <div class="abous-us-info">
                     <h1 class="detail-note-title">Tentang Robek</h1>
                     <div class="detail-note-content-cont">
                         <p class="detail-note-content">

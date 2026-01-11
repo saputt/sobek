@@ -12,23 +12,24 @@
   --primary: #ffff;
   --dark: #1a1a1b;
   --text-main: #263238;
-  --bg-board: #F9F9F9; 
+  --bg-board: #F9F9F9;
 
   --radius: 8px;
   --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-hard: 5px 5px 0px rgba(0, 0, 0, 0.1); 
+  --shadow-hard: 5px 5px 0px rgba(0, 0, 0, 0.1);
 
-  --shadow-floating: 0 10px 20px rgba(0,0,0,0.08);
+  --shadow-floating: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family: var(--font-main);
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--font-main);
+  box-sizing: border-box;
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 p {

@@ -1,35 +1,36 @@
-@import url("global.css");
-
 @keyframes swayWind {
-  0% {
-    transform: rotate(1deg);
-  }
-  30% {
-    transform: rotate(-1.5deg);
-  }
-  60% {
-    transform: rotate(1deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(1deg);
+    }
+
+    30% {
+        transform: rotate(-1.5deg);
+    }
+
+    60% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .sticky-note {
-    display: inline-block; 
+    display: inline-block;
     position: relative;
-    margin-bottom: 100px; 
-    width: 300px;    
+    margin-bottom: 100px;
+    width: 300px;
     cursor: pointer;
     box-shadow: -10px 40px 50px -10px rgba(0, 0, 0, 0.2);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
-    transform-origin: top center; 
-    will-change: transform; 
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-origin: top center;
+    will-change: transform;
 }
 
 .sticky-note:hover {
-  animation: swayWind 0.8s ease-out forwards;  
-  box-shadow: -20px 30px 45px -15px rgba(0, 0, 0, 0.15);
+    animation: swayWind 0.8s ease-out forwards;
+    box-shadow: -20px 30px 45px -15px rgba(0, 0, 0, 0.15);
 }
 
 .sticky-note-info {
@@ -61,10 +62,12 @@
     line-height: 25px;
 }
 
-.detail-note-cont, .create-note-cont, .about-us-cont {
+.detail-note-cont,
+.create-note-cont,
+.about-us-cont {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.3); 
-    backdrop-filter: blur(3px); 
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,40 +93,47 @@
     cursor: pointer;
 }
 
-.detail-note, .create-note, .about-us-note {
+.detail-note,
+.create-note,
+.about-us-note {
     width: 700px;
-    height: 700px;
+    height: 750px;
     padding: 40px;
     line-height: 75px;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     position: relative;
 }
 
 .create-note {
     z-index: 20;
+    position: relative;
 }
 
-.detail-note-title, .create-note-title {
+.detail-note-title,
+.create-note-title {
     font-size: 58px;
     font-weight: 800px;
     word-wrap: break-word;
 }
 
-.detail-note-username, .create-note-username {
+.detail-note-username,
+.create-note-username {
     font-size: 24px;
     font-weight: 500;
 }
 
-.detail-note-content, .create-note-content {
+.detail-note-content,
+.create-note-content {
     font-size: 18px;
     font-weight: 400;
     line-height: 50px;
     margin-top: 15px;
 }
 
-.detail-note-content-cont, .create-note-content-cont {
-    height: 100%;
-    overflow-y: auto;
+.detail-note-content-cont,
+.create-note-content-cont {
+    scrollbar-width: none;
+    background-color: #4A4A4A;
 }
 
 .binder-clip {
@@ -138,10 +148,11 @@
     z-index: 40;
 }
 
-.detail-info, .create-info {
+.detail-info,
+.create-info {
     background-image: url("../assets/rule-paper.png");
     background-size: contain;
-    height: 650px;
+    height: 600px;
 }
 
 .create-info {
@@ -151,9 +162,11 @@
     flex-direction: column;
 }
 
-.create-note-title-input, .create-note-username-input, .create-note-content-input  {
-    background: transparent;   
-    border: none;           
+.create-note-title-input,
+.create-note-username-input,
+.create-note-content-input {
+    background: transparent;
+    border: none;
     outline: none;
 }
 
@@ -161,14 +174,14 @@
     font-size: 35px;
     resize: none;
     width: 100%;
-    scrollbar-width: none;    
+    scrollbar-width: none;
     padding: 10px 0;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
     word-wrap: break-word;
 }
 
 .create-note-content-input {
-    height: 350px;
+    height: 370px;
     width: 100%;
     scrollbar-width: none;
     line-height: 50px;
@@ -192,8 +205,8 @@
 }
 
 .create-btn {
-    background: transparent;   
-    border: none;           
+    background: transparent;
+    border: none;
     outline: none;
     cursor: pointer;
     font-size: 30px;
@@ -205,16 +218,17 @@
     gap: 10px;
 }
 
-.board-alert{
+.board-alert {
     position: absolute;
     background-color: aliceblue;
     z-index: 10;
     top: -35px;
+    left: 50px;
     display: flex;
     height: 35px;
     justify-content: center;
     align-items: center;
-    width: 700px;
+    width: 600px;
     transition: all;
     transition-duration: 1000ms;
     color: red;
@@ -235,4 +249,13 @@
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.about-us-note {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.about-us-info {
+    scrollbar-width: none;
 }
