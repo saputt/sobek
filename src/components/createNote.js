@@ -1,29 +1,32 @@
 export const createNote = (color) => {
     return `
-        <div class="create-note-cont">
-            <div 
+        <section class="create-note-cont">
+            <article
                 class="create-note"
                 style="background-color : ${color.color}"
             >   
+                <div class="board-alert-hidd" id="board-alert-id">
+                </div>
                 <form id="form-note" onsubmit="event.preventDefault(); saveNote()">
                     <div class="create-info">
                         <textarea 
                             class="create-note-title create-note-title-input" 
                             placeholder="Input title here" 
                             maxlength="70"
-                            oninput="playWrite()"
+                            oninput="handleInput(this)"
                         ></textarea>
                         <input 
                             class="create-note-username create-note-username-input" 
                             placeholder="Input username here"
-                            oninput="playWrite()"    
+                            maxlength="50"
+                            oninput="handleInput(this)"    
                         ></input>
                         <div class="create-note-content-cont">
                             <textarea 
                                 class="create-note-content create-note-content-input" 
                                 placeholder="Input content here" 
-                                maxlength="200"
-                                oninput="playWrite()"
+                                maxlength="300"
+                                oninput="handleInput(this)"
                             ></textarea>
                         </div>
                         <div class="create-btn-cont">
@@ -32,7 +35,7 @@ export const createNote = (color) => {
                     </div>
                 </form>
                 <div class="close-note" onclick="closeDetail()">X</div>
-            </div>
-        </div>
+            </article>
+        </section>
     `
 }

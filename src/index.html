@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Robek - Digital Sticky Notes</title>
     <link rel="stylesheet" href="./styles/global.css">
+</head>
 <body>
     <div class="cont">
-        <div class="sidebar">
-            <div class="logo-cont">
-                <h3>Robek</h3>
-            </div>
-            <div class="navbar">
-                <div class="nav-link">Explore</div>
-                <div class="nav-link" onclick="openCreate()">Create Note</div>
-            </div>
-        </div>
-        <div class="main-cont">
-            <div class="mansory-cont" onclick={}></div>
-            <div class="detail"></div>
-        </div>
+        
+        <aside class="sidebar">
+            <header class="logo-cont">
+                <h2>Robek</h2> 
+            </header>
+            
+            <nav class="navbar">
+                <ul>
+                    <div class="nav-link">Explore</div>
+                    <div class="nav-link" onclick="openCreate()">Create Note</div>
+                    <div class="nav-link" onclick="openAboutUs()">About Us</div>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-cont">
+            <section class="mansory-cont" aria-label="Board of Notes"></section>
+            <div class="detail" role="dialog" aria-modal="true"></div>
+        </main>
     </div>
 
-    <div id="loader" class="loader-cont">
+    <div id="loader" class="loader-cont" aria-live="polite">
         <div class="loader-content">
-            <h1 class="logo-loader">Robek</h1>
-            <div class="progress-bar"></div>
+            <h2 class="logo-loader">Robek</h2>
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
             <p>Menyiapkan papan tulis...</p>
         </div>
     </div>

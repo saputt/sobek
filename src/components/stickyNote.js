@@ -1,16 +1,22 @@
 export const StickyNote = (data, color, rotate) => {
     return `
-        <div 
-            class="sticky-note"
-            style="background: ${color.linear}; rotate: ${rotate}deg"
+        <article 
+            class="sticky-note ${color.class}"
+            style="background: ${color.linear}; transform: rotate(${rotate}deg)"
             onclick="openDetail('${data.id}','${color.color}', '${rotate}')"
         >
-            <div class="tape"></div>
+            <div class="tape" aria-hidden="true"></div>
+            
             <div class="sticky-note-info">
-                <h3 class="sticky-note-title">${data.title}</h3>
-                <p class="sticky-note-username">${data.username}</p>
-                <p class="sticky-note-content">${data.content}</p>
+                <header>
+                    <h3 class="sticky-note-title">${data.title}</h3>
+                    <address class="sticky-note-username">@${data.username}</address>
+                </header>
+                
+                <div class="sticky-note-body">
+                    <p class="sticky-note-content">${data.content}</p>
+                </div>
             </div>
-        </div>
+        </article>
     `
 }
